@@ -17,7 +17,7 @@
     <!-- HEADER -->
     
     <header class="header">
-        <div class="container header-inner">
+        <div class="container header-inner"> 
     
             <div class="logo">
                 <img src="images/logo.png" alt="Brand Logo" class="logo-img">
@@ -444,26 +444,22 @@
                 
             </div>
     
-            <form action="https://formsubmit.co/easlum97@gmail.com" method="POST" class="order-form" id="orderForm">
+            <form action="https://api.web3forms.com/submit" method="POST" class="order-form" id="orderForm">
                 
-                <!--EMAIL Carbon Copy-->  
-                <input type="hidden" name="_cc" value="ndiritusamuel99@gmail.com">
-            
-                <!-- Disable Captcha -->
-                <input type="hidden" name="_captcha" value="false">
-            
-                <!-- Email Subject -->
-                <input type="hidden" name="_subject" value="New Order Received!">
-            
-                <!-- Redirect After Submit -->
-                <!-- <input type="hidden" name="_next" value="thankyou.html"> -->
+                <!-- Web3Forms access key: paste yours from web3forms.com -->
+                <input type="hidden" name="access_key" value="dcadaed5-fe40-4f44-b4a3-0b94964637a0">
 
-                <!--AFTER HOSTING Connect to online thankyou.html-->
-                <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html"> -->
+                <!-- Email subject -->
+                <input type="hidden" name="subject" value="New Order Received!">
 
-    
+                <!-- Sender name shown in the notification email -->
+                <input type="hidden" name="from_name" value="Imperial Appliances Haven Website">
+
+                <!-- Spam honeypot (must stay hidden and unchecked) -->
+                <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+
                 <div class="form-group">
-                    <label for="name">Full Name *</label>
+                    <label for="fullname">Full Name *</label>
                     <input type="text" id="fullname" name="fullname" required>
                 </div>
     
@@ -478,7 +474,7 @@
                 </div>
     
                 <div class="form-group">
-                    <label for="alt-phone">Alternative Phone</label>
+                    <label for="alternative_phone">Alternative Phone</label>
                     <input type="tel" id="alternative_phone" name="alternative_phone" placeholder="Optional">
                 </div>
     
@@ -486,7 +482,7 @@
                     <label for="message">
                         Additional Information (Number of sets, specific address, or other enquiry)
                     </label>
-                    <textarea type="text" id="message" name="Additional Info" rows="4" placeholder="Optional"></textarea>
+                    <textarea id="message" name="additional_info" rows="4" placeholder="Optional"></textarea>
                 </div>
     
                 <button type="submit" class="btn-primary order-btn">
